@@ -130,10 +130,10 @@ download_and_extract_backhaul() {
     ARCH=$(uname -m)
     case "$ARCH" in
         x86_64)
-            DOWNLOAD_URL="https://github.com/dodolkochick/kondoki/blob/main/kondok_amd64.tar.gz"
+            DOWNLOAD_URL="https://raw.githubusercontent.com/dodolkochick/kondoki/refs/heads/main/kondok_amd64.tar.gz"
             ;;
         arm64|aarch64)
-            DOWNLOAD_URL="https://raw.githubusercontent.com/ArminNy/Backhaul_Premium/refs/heads/main/backhaul_arm64.tar.gz"
+            DOWNLOAD_URL=""
             ;;
         *)
             echo -e "${RED}Unsupported architecture: $ARCH.${NC}"
