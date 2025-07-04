@@ -151,11 +151,11 @@ download_and_extract_backhaul() {
     DOWNLOAD_DIR=$(mktemp -d)
     echo -e "Downloading Backhaul from $DOWNLOAD_URL...\n"
     sleep 1
-    curl -sSL -o "$DOWNLOAD_DIR/kondok.tar.gz" "$DOWNLOAD_URL"
+    curl -sSL -o "$DOWNLOAD_DIR/backhaul.tar.gz" "$DOWNLOAD_URL"
     echo -e "Extracting Backhaul...\n"
     sleep 1
     mkdir -p "$config_dir"
-    tar -xzf "$DOWNLOAD_DIR/kondok.tar.gz" -C "$config_dir"
+    tar -xzf "$DOWNLOAD_DIR/backhaul.tar.gz" -C "$config_dir"
     echo -e "${GREEN}Backhaul installation completed.${NC}\n"
     chmod u+x "${config_dir}/backhaul_premium"
     rm -rf "$DOWNLOAD_DIR"
